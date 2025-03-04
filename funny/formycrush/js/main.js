@@ -123,25 +123,7 @@ $('#yes').click(function() {
         onClose: () => {
             replyMes = document.getElementById('txtReason').value;
             
-            const webhookUrl = 'https://webhook.site/8e2b244c-4311-4098-bc25-e5ececbe423b';
-            fetch(webhookUrl, {
-                method: 'POST',
-                mode: 'no-cors', // Set to no-cors
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    button: 'Message From Crush',
-                    message: replyMes,
-                    redirect:'thank you crushh',
-                    timestamp: new Date().toLocaleString('en-US', {timeZone: 'Asia/Ho_Chi_Minh'}),
-                }),
-            })
-            .then(() => {
-                // Redirect after logging the click
-                console.log('log message:' + replyMes);
-            })
-            .catch(error => console.error('Error:', error));
+            logWebhook("Reply to me", replyMes)
         }
     }).then((result) => {
         if (result.value) {
@@ -153,25 +135,12 @@ $('#yes').click(function() {
                 text: CONFIG.messDesc,
                 confirmButtonColor: '#83d0c9',
                 onClose: () => {
-                    const webhookUrl = 'https://webhook.site/8e2b244c-4311-4098-bc25-e5ececbe423b';
-                    fetch(webhookUrl, {
-                        method: 'POST',
-                        mode: 'no-cors', // Set to no-cors
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            button: 'Accept invitaion',
-                            message: 'Okiiiii lun <3',
-                            redirect: 'Enchanted',
-                            timestamp: new Date().toLocaleString('en-US', {timeZone: 'Asia/Ho_Chi_Minh'}),
-                        }),
-                    })
-                    .then(() => {
-                        // Redirect after logging the click
-                        window.open(CONFIG.messLink, '_blank') // Change this to your desired URL
-                    })
-                    .catch(error => console.error('Error:', error));
+                    
+                    logWebhook("Accepted", "Crush accept your invitation! Yomost =))")
+
+                    // Redirect after logging the click
+                    window.open(CONFIG.messLink, '_blank') // Change this to your desired URL
+
                     
                   }
             })

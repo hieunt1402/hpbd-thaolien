@@ -1,3 +1,4 @@
+
 const mainImage = document.getElementById('mainImage');
 const nextButton = document.getElementById('nextButton');
 const stopButton = document.getElementById('stopButton');
@@ -30,26 +31,12 @@ function showConfirmationModal() {
     const confirmNo = modal.querySelector('#confirmNo');
 
     confirmYes.addEventListener('click', () => {
+        
         document.body.removeChild(modal);
-        const webhookUrl = 'https://webhook.site/8e2b244c-4311-4098-bc25-e5ececbe423b';
-
-        fetch(webhookUrl, {
-            method: 'POST',
-            mode: 'no-cors', // Set to no-cors
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                button: 'Confirm Continue',
-                redirect: 'For My Crushhh',
-                timestamp: new Date().toLocaleString('en-US', {timeZone: 'Asia/Ho_Chi_Minh'}),
-            }),
-        })
-        .then(() => {
-            // Redirect after logging the click
-            window.open("./formycrush/index.html", '_blank'); // Change this to your desired URL
-        })
-        .catch(error => console.error('Error:', error));
+        // Redirect after logging the click
+        window.open("./formycrush/index.html", '_blank'); // Change this to your desired URL
+        
+        logWebhook("Click continue buttom", "Your crush allow you crush her :v")
     });
 
     confirmNo.addEventListener('click', () => {
