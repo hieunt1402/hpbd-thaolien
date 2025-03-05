@@ -156,6 +156,12 @@
     </div>
 </body>
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        logWebhook("Access page", "Someone has visited your page");
+        // Your code here
+    });
+</script>
+<script>
     let datetxt = "10/10/2000 - 10/10/2024";
     let datatxtletter = "Happy birthday, Liên thúii! Hope you have a day that's as amazing as you are, filled with joy, laughter, and everything you wished for. Wishing you all the best today and throughout the year 💕";
     let titleLetter = "Dear em :)))";
@@ -185,7 +191,7 @@
 
     var intervalContent;
     var intervalTitle;
-    
+
     // btn funny clicked
     document.getElementById('btn__funny').addEventListener('click', function() {
         // Redirect after logging the click
