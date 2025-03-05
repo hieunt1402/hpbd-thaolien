@@ -12,7 +12,7 @@ Welcome to my special birthday page dedicated to you! This is a little surprise 
 
 To view the birthday page, simply open the link below:
 
-[Happy Birthday Page](hieunt1402.github.io/hpbd-thaolien/)
+[Happy Birthday Page](https://hieunt1402.github.io/hpbd-thaolien/)
 
 ## How It Works
 
